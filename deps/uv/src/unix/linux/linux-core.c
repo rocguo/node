@@ -42,6 +42,9 @@
 #  undef HAVE_IFADDRS_H
 # endif
 #endif
+#ifdef ANDROID
+# undef HAVE_IFADDRS_H
+#endif
 #ifdef HAVE_IFADDRS_H
 # include <ifaddrs.h>
 #endif
