@@ -1,0 +1,24 @@
+node.js v0.8 porting for Android platform.
+========
+
+### To build:
+
+Prerequisites:
+
+    * Android ndk (r7b and r8c are tested)
+
+Linux:
+
+    * checkout node, openssl-android & pty under same directory
+    * go to node/android
+    * use build_android.sh to start the build
+    * the executable will be in libs/armeabi
+
+### To run on Android:
+
+    * adb push node to android device, e.g. /data/local/node
+    * add execute file permission 
+    * run it as on linux/windows
+    * for additional modules, copy to android manually, set NODE_PATH
+    * socket.io and many other node modules are tested and work
+
