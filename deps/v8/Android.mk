@@ -72,6 +72,9 @@ endif
 
 # The -fvisibility=hidden option below prevents exporting of symbols from
 # libv8.a in libwebcore.so.  That reduces size of libwebcore.so by 500k.
+#
+# Disable visibility=hidden for loading native addons
+#	-fvisibility=hidden
 LOCAL_CFLAGS += \
 	-Wno-endif-labels \
 	-Wno-import \
@@ -79,7 +82,6 @@ LOCAL_CFLAGS += \
 	-fno-exceptions \
 	-DENABLE_DEBUGGER_SUPPORT \
 	-DV8_NATIVE_REGEXP \
-	-fvisibility=hidden \
 	-DV8_ANDROID_LOG_STDOUT \
 	-DV8_SHARED \
 	-iquote$(LOCAL_PATH)/src
